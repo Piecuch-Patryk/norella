@@ -21,5 +21,7 @@
         
     @yield('header')
 
+    @yield('aside', '')
+
 </body>
 </html>

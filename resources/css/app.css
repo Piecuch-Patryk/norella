@@ -137,6 +137,10 @@
   .header--sentence a {
     text-decoration: underline;
   }
+  aside {
+    position: relative;
+    z-index: 2;
+  }
   
   /* Main content */
   .main--content {
