@@ -32,7 +32,7 @@
 
             @auth
             <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-0 me-0">
                 <!-- Authentication Links -->
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -48,6 +48,14 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdownAdmin" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        Zarządzaj
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownAdmin">
+                        <a class="nav-link mx-md-3 py-lg-1 text-dark" href="{{ route('category.index') }}">Kategorie</a>
                     </div>
                 </li>
             </ul>

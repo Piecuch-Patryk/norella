@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +16,19 @@ use App\Http\Controllers\MainController;
 |
 */
 
+Auth::routes();
+
 Route::controller(MainController::class)->group(function() {
     // Main Page
     Route::get('/', 'index')->name('main.index');
 });
 
-Auth::routes();
+Route::controller(CategoryController::class)->group(function() {
+    // Categories
+    Route::get('/kategorie', 'index')->name('category.index');
+    Route::get('/kategoria/{id}', 'edit')->name('category.edit')->middleware('auth');
+    Route::put('/kategoria/{category}', 'update')->name('category.update')->middleware('auth');
+});
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
