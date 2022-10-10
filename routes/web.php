@@ -32,6 +32,7 @@ Route::controller(CategoryController::class)->group(function() {
     Route::post('/dodaj-kategorie', 'store')->name('category.store')->middleware('auth');
     Route::delete('/usun-kategorie/{category}', 'destroy')->name('category.delete')->middleware('auth');
     Route::get('/dodaj-kategorie', 'create')->name('category.create')->middleware('auth');
+    Route::get('/kategoria/{id}', 'show')->name('category.show');
 });
 
 Route::controller(ProductController::class)->group(function() {

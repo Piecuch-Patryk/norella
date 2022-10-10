@@ -60,6 +60,23 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-12">
+            <h2>{{$category->title}}</h2>
+            <ul class="list-group">
+                @foreach ($products as $product)
+                    <li class="list-group-item">
+                        <h5>{{$product->title}}</h5>
+                        <p>{{$product->description}}</p>
+                        <p>{{$product->amount}} PLN</p>
+                    </li>
+                @endforeach
+            </ul>
+            <div>
+                <a href="{{route('category.show', ['id' => $category->id])}}">Więcej</a>
+            </div>
+        </div>
+    </div>
 
 </main>
 @endsection

@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Console\Scheduling\Event;
 
 class MainController extends Controller
 {
@@ -13,7 +16,13 @@ class MainController extends Controller
      */
     public function index()
     {
-        return view('main.index');
+        $category = Category::orderBy('updated_at')->first();
+        $products = $category->products->take(5);
+
+        return view('main.index', [
+            'category' => $category,
+            'products' => $products,
+        ]);
     }
 
     /**
