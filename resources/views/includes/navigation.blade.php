@@ -56,6 +56,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownAdmin">
                         <a class="nav-link mx-md-3 py-lg-1 text-dark" href="{{ route('category.index') }}">Kategorie</a>
+                        <a class="nav-link mx-md-3 py-lg-1 text-dark" href="{{ route('product.index') }}">Usługi</a>
                     </div>
                 </li>
             </ul>

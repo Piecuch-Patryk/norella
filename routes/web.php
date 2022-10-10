@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 
 /*
@@ -31,6 +32,16 @@ Route::controller(CategoryController::class)->group(function() {
     Route::post('/dodaj-kategorie', 'store')->name('category.store')->middleware('auth');
     Route::delete('/usun-kategorie/{category}', 'destroy')->name('category.delete')->middleware('auth');
     Route::get('/dodaj-kategorie', 'create')->name('category.create')->middleware('auth');
+});
+
+Route::controller(ProductController::class)->group(function() {
+    // Products
+    Route::get('/produkty', 'index')->name('product.index');
+    Route::get('/produkt/{id}', 'edit')->name('product.edit')->middleware('auth');
+    Route::put('/produkt/{product}', 'update')->name('product.update')->middleware('auth');
+    Route::post('/dodaj-produkt', 'store')->name('product.store')->middleware('auth');
+    Route::delete('/usun-produkt/{product}', 'destroy')->name('product.delete')->middleware('auth');
+    Route::get('/dodaj-produkt', 'create')->name('product.create')->middleware('auth');
 });
 
 

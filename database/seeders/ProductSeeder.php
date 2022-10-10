@@ -15,6 +15,11 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Product::factory(50)->create();
+        \App\Models\Product::factory(50)->create()->each(function(\App\Models\Product $product) {
+            $product->categories()->attach([
+                rand(1, 2),
+                rand(3, 5),
+            ]);
+        });
     }
 }
