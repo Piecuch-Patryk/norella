@@ -28,6 +28,9 @@ Route::controller(CategoryController::class)->group(function() {
     Route::get('/kategorie', 'index')->name('category.index');
     Route::get('/kategoria/{id}', 'edit')->name('category.edit')->middleware('auth');
     Route::put('/kategoria/{category}', 'update')->name('category.update')->middleware('auth');
+    Route::post('/dodaj-kategorie', 'store')->name('category.store')->middleware('auth');
+    Route::delete('/usun-kategorie/{category}', 'destroy')->name('category.delete')->middleware('auth');
+    Route::get('/dodaj-kategorie', 'create')->name('category.create')->middleware('auth');
 });
 
 
