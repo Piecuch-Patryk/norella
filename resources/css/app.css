@@ -102,6 +102,9 @@
     left: .5em;
     width: 60px;
   }
+  .active > .nav-link {
+    color: #fff;
+  }
   
   /* Home page */
   .header--home {
