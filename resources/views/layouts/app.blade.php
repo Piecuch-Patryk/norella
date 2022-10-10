@@ -23,5 +23,6 @@
 
     @yield('aside', '')
 
+    @yield('content')
 </body>
 </html>

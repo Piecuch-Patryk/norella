@@ -53,7 +53,13 @@
 @endsection
 
 @section('content')
+<main class="main--content container-fluid mx-0 position-relative">
+    <div class="row">
+        <div class="col-12 text-center text-md-start overflow-hidden">
+            <h2 class="title--decor position-relative d-inline-block py-3 mb-0 text-pink">Norella Poleca</h2>
+        </div>
+    </div>
 
-    <h1>Main page</h1>
 
+</main>
 @endsection
