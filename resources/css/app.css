@@ -1,0 +1,309 @@
+:root {
+    --primary-color: #F66D9B;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  /* TEXT */
+  .text-pink {
+    color: var(--primary-color);
+  }
+  
+  /* BG */
+  .bg-pink {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+  
+  /* BTN */
+  .btn-light {
+    background-color: #fff;
+    color: var(--primary-color);
+  }
+  .btn-light:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+  }
+  .btn-outline-light {
+    color: #fff;
+    border-color: #fff;
+  }
+  .btn-outline-light:hover {
+    color: var(--primary-color);
+  }
+  .btn-pink {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+  .btn-pink:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  .btn-outline-pink {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+  }
+  .btn-outline-pink:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+  }
+  
+  /* ROW */
+  .row.overflow--x--hidden {
+    overflow-x: hidden;
+  }
+  
+  /* Navigation */
+  .main--nav {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 85%;
+    z-index: 100;
+  }
+  .main--nav::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 120%;
+    width: 100%;
+    background-color: var(--primary-color);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+  }
+  .main--nav.nav--fixed::before {
+    border-radius: 0;
+  }
+  .main--nav.nav--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: .5em !important;
+    transition: width .3s ease-in-out;
+  }
+  .logo {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 120px;
+    transition: all .3s ease-in-out;
+  }
+  .main--nav.nav--fixed .logo {
+    top: 10px;
+    left: .5em;
+    width: 60px;
+  }
+  
+  /* Home page */
+  .header--home {
+    min-height: 70vh;
+    background-image: url("../storage/assets/home-page/header-bg.jpg");
+    background-size: cover;
+    background-position: 50% 0;
+    letter-spacing: 1px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .bg--color {
+    position: absolute;
+    top: -20%;
+    left: -60%;
+    height: 140%;
+    width: 160%;
+    background: radial-gradient(circle, rgba(51,51,51,1) 0%, rgba(51,51,51,1) 55%, rgba(246,109,155,1) 100%);
+    opacity: .7;
+  }
+  .header--sentence {
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding-top: 1rem;
+    font-style: italic;
+    font-size: .8rem;
+  }
+  .header--sentence a {
+    text-decoration: underline;
+  }
+  
+  /* Main content */
+  .main--content {
+    background-color: #fff;
+    z-index: 2;
+  }
+  .flex--list--item {
+    width: 50px;
+  }
+  .title--decor::before,
+  .title--decor::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1000%;
+    height: 1px;
+    background-color: var(--primary-color);
+  }
+  .title--decor::before {
+    left: -1000%;
+  }
+  .title--decor::after {
+    right: -1000%;
+  }
+  .category--wrap {
+    z-index: 3;
+    background-size: cover;
+    background-position: center;
+  
+    background-repeat: no-repeat;
+  }
+  .category--1 {
+    background-image: url("../storage/assets/home-page/bg-recomended-1.png");
+  }
+  .category--2 {
+    background-image: url("../storage/assets/home-page/bg-recomended-2.png");
+  }
+  .list--decor::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: -7px;
+    height: 80%;
+    width: 2px;
+    background-color: var(--primary-color);
+  }
+  .sticky--section {
+    z-index: 1;
+  }
+  .main--sentence {
+    font-size: 1.5rem;
+  }
+  .bottom--btn {
+    position: relative;
+    background-color: #fff;
+    z-index: 2;
+  }
+  .bottom--btn::before {
+    content: '';
+    position: absolute;
+    top: -10rem;
+    left: 0;
+    height: 10rem;
+    width: 100%;
+    background-color: #fff;
+    z-index: -1;
+  }
+  .comments--section {
+    background-color: #fff;
+    z-index: 3;
+  }
+  
+  /* Footer */
+  .footer {
+    z-index: 3;
+    overflow: hidden;
+  }
+  .footer--bg {
+    background-image: url("../storage/assets/shared/footer-bg.png");
+    background-position: 50% 0;
+    background-size: 150% 100%;
+    background-repeat: no-repeat;
+    z-index: 3;
+  }
+  .water--mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 300px;
+    transform: rotate(35deg) translate3d(-15%, 30%, 0);
+    opacity: .08;
+    background-image: url("../storage/assets/logo/norella.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  
+  /* Table */
+  .table thead th,
+  .table th,
+  .table td {
+    border-color: var(--pink);
+  }
+  .table thead th {
+    border-top: none;
+  }
+  
+  /* Cookie consent */
+  .cookie-consent {
+    position: sticky;
+    bottom: 0;
+    background-color: var(--pink);
+    text-align: center;
+    padding: 1rem 0;
+    color: #fff;
+    box-shadow: 0 0 1rem 0 #333;
+  }
+  .js-cookie-consent-agree {
+    background-color: #3b5998;
+    border: none;
+    border-radius: .2rem;
+    color: #fff;
+    margin: 0 1rem;
+  }
+  
+  
+  @media (min-width: 576px) {
+    .flex--list--item {
+      width: 100px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .main--nav {
+      width: 75%;
+    }
+    .header--home {
+      min-height: 100vh;
+    }
+    .header--aside {
+      right: 175px;
+      top: 350px;
+      background-color: rgba(255,255,255,1);
+      border-radius: 5px;
+      padding: .5rem 1rem;
+      box-shadow: 0 0 15px 0 rgba(51, 51, 51, .5);
+    }
+    .category--wrap {
+      background-attachment: fixed;
+    }
+    .bg--lg--img--1 h3,
+    .bg--lg--img--2 h3 {
+      background: none;
+    }
+  
+    .water--mark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1000px;
+      height: 500px;
+      transform: rotate(15deg) translate3d(5%, -15%, 0);
+      opacity: .05;
+      background-image: url("../storage/assets/logo/norella.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+  
