@@ -19,6 +19,7 @@
 <body>
     @include('includes.navigation')
         
+    @yield('header')
 
 </body>
 </html>
