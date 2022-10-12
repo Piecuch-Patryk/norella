@@ -116,6 +116,9 @@
     overflow: hidden;
     z-index: 1;
   }
+  .header--home h1 {
+    font-size: 3rem;
+  }
   .bg--color {
     position: absolute;
     top: -20%;
@@ -123,7 +126,7 @@
     height: 140%;
     width: 160%;
     background: radial-gradient(circle, rgba(51,51,51,1) 0%, rgba(51,51,51,1) 55%, rgba(246,109,155,1) 100%);
-    opacity: .7;
+    opacity: .75;
     z-index: -1;
   }
   .header--sentence {
@@ -132,7 +135,7 @@
     left: 0;
     padding-top: 1rem;
     font-style: italic;
-    font-size: .8rem;
+    font-size: 1.5rem;
   }
   .header--sentence a {
     text-decoration: underline;
@@ -169,14 +172,36 @@
     z-index: 3;
     background-size: cover;
     background-position: center;
-  
     background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+
+  }
+  .category--wrap::after {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -60%;
+    height: 140%;
+    width: 160%;
+    background: radial-gradient(circle, rgba(51,51,51,1) 0%, rgba(51,51,51,1) 55%, rgba(246,109,155,1) 100%);
+    opacity: .7;
   }
   .category--1 {
     background-image: url("../../storage/app/public/assets/home-page/bg-recomended-1.png");
   }
+  .category--1 > div {
+    position: relative;
+    z-index: 2;
+  }
   .category--2 {
     background-image: url("../../storage/app/public/assets/home-page/bg-recomended-2.png");
+  }
+  .card-body {
+    transition: .2s ease-in-out;
+  }
+  .card-body:hover {
+    color: var(--primary-color);
   }
   .list--decor::before {
     content: '';

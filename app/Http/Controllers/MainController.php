@@ -16,10 +16,12 @@ class MainController extends Controller
      */
     public function index()
     {
+        $categories = Category::get();
         $category = Category::orderBy('updated_at')->first();
-        $products = $category->products->take(5);
+        $products = $category->products->take(3);
 
         return view('main.index', [
+            'categories' => $categories,
             'category' => $category,
             'products' => $products,
         ]);
