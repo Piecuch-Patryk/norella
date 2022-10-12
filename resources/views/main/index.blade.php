@@ -8,7 +8,7 @@
             <div class="col-12 col-md-8 col-lg-6 px-3 text-md-start mt-md-5">
                 <h1 class="mb-4 mb-md-5 mb-xl-3">Twoje Studio Urody</h1>
                 <p class="mb-4 mb-md-5 fs-5">Dzięki pasji i długoletnim szkoleniom oferujemy Państwu profesjonalne usługi kosmetyczne na najwyższym poziome.</p>
-                <a href="#" class="btn btn-light fw-bold">Nasza Oferta</a>
+                <a href="{{ route('product.index') }}" class="btn btn-light fw-bold">Nasza Oferta</a>
             </div>
             <div class="position-absolute header--sentence m-0 pb-3">
                 <p class="m-0 text-light">Pozwól sobie na chwilę relaksu.</p>

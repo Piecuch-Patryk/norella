@@ -13,11 +13,8 @@
                 <li class="nav-item {{ Route::is('main.index') ? 'active' : '' }}">
                     <a class="nav-link mx-md-3 py-lg-1" href="{{ route('main.index') }}">Strona Główna</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link mx-md-3 py-lg-1" href="#">Oferta</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link mx-md-3 py-lg-1" href="#">Cennik</a>
+                <li class="nav-item {{ Route::is('product.index') ? 'active' : '' }}">
+                    <a class="nav-link mx-md-3 py-lg-1" href="{{ route('product.index') }}">Oferta</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link mx-md-3 py-lg-1" href="#">Opinie</a>
