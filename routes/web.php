@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 
@@ -45,5 +46,9 @@ Route::controller(ProductController::class)->group(function() {
     Route::get('/dodaj-produkt', 'create')->name('product.create')->middleware('auth');
 });
 
+Route::controller(ReviewController::class)->group(function() {
+    // Reviews
+    Route::get('/opinie', 'index')->name('veview.index');
+});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
