@@ -50,7 +50,7 @@ class CategoryController extends Controller
     public function show($id)
     {
         $category = Category::where('id', '=', $id)->get()->first();
-        $products = $category->products;
+        $products = $category->products->paginate(6);
 
         return view('category.show', [
             'category' => $category,
