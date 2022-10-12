@@ -24,5 +24,7 @@
     @yield('aside', '')
 
     @yield('content')
+
+    @include('includes.footer')
 </body>
 </html>

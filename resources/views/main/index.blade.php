@@ -97,7 +97,7 @@
         </ul>
     </div>
 
-    <div class="row bg-light pb-5">
+    <div class="row bg-light pb-5 overflow-hidden">
         <div class="col-12 mb-5 text-center">
             <h2 class="title--decor position-relative d-inline-block py-3 mb-0 text-pink">Opinie Naszych Klientów</h2>
         </div>
