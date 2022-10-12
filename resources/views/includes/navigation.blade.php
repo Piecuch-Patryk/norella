@@ -20,7 +20,7 @@
                     <a class="nav-link mx-md-3 py-lg-1" href="{{route('review.index')}}">Opinie</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-md-3 py-lg-1" href="#">O nas</a>
+                    <a class="nav-link mx-md-3 py-lg-1 {{ Route::is('about.index') ? 'active' : '' }}" href="{{route('about.index')}}">O nas</a>
                 </li>
             </ul>
 

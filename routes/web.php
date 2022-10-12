@@ -54,4 +54,6 @@ Route::controller(ReviewController::class)->group(function() {
     Route::delete('/usun-opinie/{review}', 'destroy')->name('review.delete')->middleware('auth');
 });
 
+Route::view('/o-nas', 'about.index')->name('about.index');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
