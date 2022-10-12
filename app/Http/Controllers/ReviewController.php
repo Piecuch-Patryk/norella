@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Review;
 use Illuminate\Http\Request;
+use App\Http\Requests\ReviewRequest;
 
 class ReviewController extends Controller
 {
@@ -13,7 +15,8 @@ class ReviewController extends Controller
      */
     public function index()
     {
-        //
+        $reviews = Review::latest()->paginate(8);
+        return view('review.index', ['reviews' => $reviews]);
     }
 
     /**
@@ -23,7 +26,7 @@ class ReviewController extends Controller
      */
     public function create()
     {
-        //
+        return view('review.create');
     }
 
     /**
@@ -32,9 +35,10 @@ class ReviewController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ReviewRequest $request)
     {
-        //
+        Review::create($request->validated());
+        return redirect()->route('review.index')->with('message', 'Twoja opinia została dodana');
     }
 
     /**
@@ -74,11 +78,12 @@ class ReviewController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Review   $review
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Review $review)
     {
-        //
+        $review->delete();
+        return redirect()->route('review.index')->with('message', 'Wybrana opinia została usunięta');
     }
 }

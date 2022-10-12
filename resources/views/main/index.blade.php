@@ -97,5 +97,41 @@
         </ul>
     </div>
 
+    <div class="row bg-light pb-5">
+        <div class="col-12 mb-5 text-center">
+            <h2 class="title--decor position-relative d-inline-block py-3 mb-0 text-pink">Opinie Naszych Klientów</h2>
+        </div>
+        <div class="col-12">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade bg-light" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    @for ($i = 0; $i < count($reviews); $i++)
+                        <div class="carousel-item bg-light {{ $i === 0 ? 'active' : '' }}">
+                            <div class=" px-5 mx-md-5 text-center">
+                                <h3 class="mb-3">{{ $reviews[$i]->name }}</h3>
+                                <p class="mb-1">{{ $reviews[$i]->content }}</p>
+                                <p class="mb-1 small text-muted">{{ $reviews[$i]->created_at->format('Y/m/d') }}</p>
+                            </div>
+                            <span id="pauseIcon" class="pause-icon"><i class="far fa-pause-circle"></i></span>
+                        </div>
+                    @endfor
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Poprzedni</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Następny</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row bg-light pb-5">
+        <div class="col-12 d-flex justify-content-center">
+            <a href="{{route('review.create')}}" class="btn btn-sm btn-pink rounded-pill me-5">Dodaj opinię</a>
+            <a href="{{route('review.index')}}" class="btn btn-sm btn-outline-info rounded-pill ms-5">Pokaż wszystkie</a>
+        </div>
+    </div>
 </main>
 @endsection

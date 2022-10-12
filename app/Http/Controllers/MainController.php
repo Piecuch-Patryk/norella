@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Review;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -19,11 +20,13 @@ class MainController extends Controller
         $categories = Category::get();
         $category = Category::orderBy('updated_at')->first();
         $products = $category->products->take(3);
+        $reviews = Review::get();
 
         return view('main.index', [
             'categories' => $categories,
             'category' => $category,
             'products' => $products,
+            'reviews' => $reviews,
         ]);
     }
 

@@ -48,7 +48,10 @@ Route::controller(ProductController::class)->group(function() {
 
 Route::controller(ReviewController::class)->group(function() {
     // Reviews
-    Route::get('/opinie', 'index')->name('veview.index');
+    Route::get('/opinie', 'index')->name('review.index');
+    Route::get('/dodaj-opinie', 'create')->name('review.create');
+    Route::post('/dodaj-opinie', 'store')->name('review.store');
+    Route::delete('/usun-opinie/{review}', 'destroy')->name('review.delete')->middleware('auth');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
