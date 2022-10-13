@@ -19,11 +19,15 @@
                     <p>{{session('message')}}</p>
                 @endif
             </div>
-            @auth
-                <div class="col-12">
-                    <a href="{{route('product.create')}}" class="btn btn-sm btn-success">Dodaj Usługę</a>
-                </div>
-            @endauth
+        </div>
+        <div class="row text-center">
+            <div class="col-12">
+                @auth
+                    <div class="col-12">
+                        <a href="{{route('product.create')}}" class="btn btn-sm btn-success">Dodaj Usługę</a>
+                    </div>
+                @endauth
+            </div>
         </div>
         <div class="row">
             <div class="col-12 text-center text-lg-start col-lg-4">
@@ -52,11 +56,11 @@
                             <p class="my-3">{{$product->description}}</p>
                             @auth
                                 <div class="d-flex">
-                                    <a href="{{route('product.edit', ['id' => $product->id])}}" class="btn-btn-info">Edytuj</a>
+                                    <a href="{{route('product.edit', ['id' => $product->id])}}" class="btn btn-sm btn-info me-3">Edytuj</a>
                                     <form action="{{ route('product.delete', ['product' => $product->id]) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-sm btn-danger py-0">Usuń</button>
+                                        <button type="submit" class="btn btn-sm btn-danger ms-3">Usuń</button>
                                     </form>
                                 </div>
                             @endauth

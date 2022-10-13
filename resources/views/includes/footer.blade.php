@@ -1,6 +1,6 @@
 <footer class="footer container-fluid position-relative text-center bg-light pt-5">
     <div class="row position-relative footer--bg py-5">
-        <div class="col-8 col-lg-12 d-flex flex-column justify-content-center align-items-center flex-lg-row text-center text-white py-lg-5">
+        <div class="col-12 d-flex flex-column justify-content-center align-items-center flex-lg-row text-center text-white py-lg-5">
             <div class="w-100 my-2">
                 <h6 class="h3 m-0 text-dark">Zapraszamy</h6>
                 <p class="m-0">Pn-Pt 10:00 - 18:00</p>

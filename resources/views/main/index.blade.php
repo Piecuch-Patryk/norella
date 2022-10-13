@@ -60,8 +60,8 @@
         </div>
     </div>
     <div class="row category--wrap category--1">
-        <div class="col-5 ms-4 py-4">
-            <h2 class="text-light py-4">{{$category->title}}</h2>
+        <div class="col-12 col-sm-10 col-md-8 col-lg-5 mx-sm-auto ms-md-4 py-md-4">
+            <h2 class="text-center text-md-start text-light py-4">{{$category->title}}</h2>
             <ul class="list-group">
                 @foreach ($products as $product)
                     <li class="list-group-item my-2 rounded-2">
@@ -87,7 +87,7 @@
         </div>
     </div>
     <div class="row bg-light pb-5">
-        <ul class="col-11 mx-auto list-group flex-row justify-content-between align-items-center">
+        <ul class="col-11 mx-auto list-group flex-lg-row justify-content-around align-items-start">
             @foreach ($categories as $category)
                 <a href="{{route('category.show', ['id' => $category->id])}}" class="card-body p-4 text-decoration-none">
                     <h5 class="card-title text-decoration-underline">{{$category->title}}</h5>
