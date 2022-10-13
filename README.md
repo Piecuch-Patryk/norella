@@ -1,8 +1,15 @@
-<p align="center"><a href="https://devpat.online/projects/norella/public" target="_blank"><img src="storage/app/public/assets/logo/norella.png" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://devpat.online/projects/norella/public" target="_blank"><img src="storage/app/public/assets/logo/norella.png" width="400" alt="Norella Logo"></a></p>
 
-## About Norella
+<p align="center"><a href="https://devpat.online/projects/norella/public" target="_blank">website</a></p>
 
-Norella is a web application build with Laravel 9 and Bootstrap 5. It is Content Managment System with products and each product has a category assigned.
+## About
+
+### Description
+
+Norella is a web application build with Laravel 9 and Bootstrap 5. It is Content Managment System with products and each product has a category assigned.  
+
+### Demo
+Visit <a href="https://devpat.online/projects/norella/public" target="_blank">here</a> to click through the entire application.  
 
 ## Installation
 
