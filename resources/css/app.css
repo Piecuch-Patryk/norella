@@ -300,35 +300,11 @@
     position: relative;
     z-index: 5;
   }
-  
-  /* Table */
-  .table thead th,
-  .table th,
-  .table td {
-    border-color: var(--pink);
-  }
-  .table thead th {
-    border-top: none;
-  }
-  
-  /* Cookie consent */
+    /* Cookie consent */
   .cookie-consent {
-    position: sticky;
-    bottom: 0;
-    background-color: var(--pink);
-    text-align: center;
-    padding: 1rem 0;
-    color: #fff;
-    box-shadow: 0 0 1rem 0 #333;
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,.5);
+    z-index: 100;
   }
-  .js-cookie-consent-agree {
-    background-color: #3b5998;
-    border: none;
-    border-radius: .2rem;
-    color: #fff;
-    margin: 0 1rem;
-  }
-  
   
   @media (min-width: 576px) {
     .flex--list--item {

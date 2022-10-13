@@ -26,5 +26,7 @@
     @yield('content')
 
     @include('includes.footer')
+    
+    @include('cookie-consent::index')
 </body>
 </html>
