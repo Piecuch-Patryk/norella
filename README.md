@@ -51,8 +51,3 @@ Password: *admin1234*
 
 - [ ] multilanguage  
 - [ ] reviews - many to many relation with products  
-
-
-
-
-
