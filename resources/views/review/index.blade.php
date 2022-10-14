@@ -14,12 +14,8 @@
 
 @section('content')
 <main class="container-fluid">
+    @include('shared.sessionMessage')
     <div class="row mt-3">
-        @if(session('message'))
-            <div class="col-12">
-                <p class="text-success text-center">{{session('message')}}</p>
-            </div>
-        @endif
         <div class="col-12 text-center">
             <a href="{{ route('review.create') }}" class="btn btn-pink">Dodaj opinię</a>
         </div>

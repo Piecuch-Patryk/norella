@@ -13,12 +13,8 @@
 
 @section('content')
     <main class="container">
+        @include('shared.sessionMessage')
         <div class="row">
-            <div class="col-12 text-center fs-3 mt-3">
-                @if(session()->has('message'))
-                    <p>{{session('message')}}</p>
-                @endif
-            </div>
             <div class="col-12 text-center py-3">
                 <a href="{{route('category.create')}}" class="btn btn-sm btn-success">Dodaj kategorię</a>
             </div>

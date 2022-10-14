@@ -13,13 +13,7 @@
 
 @section('content')
     <main class="container pt-3 mt-md-5 pt-md-5">
-        <div class="row">
-            <div class="col-12">
-                @if(session()->has('message'))
-                    <p>{{session('message')}}</p>
-                @endif
-            </div>
-        </div>
+        @include('shared.sessionMessage')
         <div class="row text-center">
             <div class="col-12">
                 @auth
