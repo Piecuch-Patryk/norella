@@ -1,4 +1,4 @@
-<p align="center"><a href="https://devpat.online/projects/norella/public" target="_blank"><img src="storage/app/public/assets/logo/norella.png" width="400" alt="Norella Logo"></a></p>
+<p align="center"><a href="https://devpat.online/projects/norella/public" target="_blank"><img src="storage/app/public/assets/logo/norella.png" alt="Norella Logo"></a></p>
 
 <p align="center"><a href="https://devpat.online/projects/norella/public" target="_blank">website</a></p>
 
