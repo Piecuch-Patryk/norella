@@ -17,7 +17,7 @@ Visit <a href="https://devpat.online/projects/norella/public" target="_blank">he
 
 Use `git clone https://github.com/Piecuch-Patryk/norella` to clone project.  
 Type `cd norella` to go to norella folder.  
-Install dependencies `composer-install`  
+Install dependencies `composer install`  
 Change database credentials in `.env` file.  
 Create database with the same name as specified in `.env` file.  
 Type `php artisan migrate --seed` to create and seed tables in database.  
