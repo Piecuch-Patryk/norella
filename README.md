@@ -50,7 +50,7 @@ Password: *admin1234*
 ### To Do
 
 - [ ] multilanguage  
-- [ ] reviews - many to one relation with products  
+- [ ] reviews - many to many relation with products  
 
 
 
