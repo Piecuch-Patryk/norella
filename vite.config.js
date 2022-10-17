@@ -7,6 +7,9 @@ export default defineConfig({
             input: [
                 'resources/sass/app.scss',
                 'resources/js/app.js',
+                'resources/css/app.css',
+                'public/js/hideMessage.js',
+                'public/js/navigation.js',
             ],
             refresh: true,
         }),
